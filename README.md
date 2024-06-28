@@ -3,7 +3,8 @@
 1. Navigation
 
 - Opsi 1
-- dst
+- Opsi 2
+- Opsi 3
 
 2. Footer
 3. Hero section
