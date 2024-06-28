@@ -16,11 +16,9 @@ const Navbar = () => {
   }, [optionMenu]);
 
   const [activeMenu, setActiveMenu] = useState(false);
-
   const handleMenu = () => {
     setActiveMenu(!activeMenu);
   };
-
   const prevOptions = () => {
     setOptionMenu(optionMenu - 1);
   };
@@ -29,9 +27,11 @@ const Navbar = () => {
   };
   const opsi1 = () => (
     <>
-      <div className="bg-transparent md:bg-slate-500">
+      <div
+        className={`bg-transparent md:bg-slate-500 ${activeMenu ? "fixed w-full" : ""}`}
+      >
         <div
-          className={`container mx-auto flex max-w-[1200px] items-center justify-between px-10 py-4 ${activeMenu ? "" : "shadow-md md:shadow-none"}`}
+          className={`container relative z-10 mx-auto flex max-w-[1200px] items-center justify-between px-10 py-4 ${activeMenu ? "" : "shadow-md md:shadow-none"}`}
         >
           <h1 className="text-4xl font-bold">Logo.</h1>
           <ul
@@ -66,9 +66,11 @@ const Navbar = () => {
   );
   const opsi2 = () => (
     <>
-      <div className="bg-transparent md:bg-slate-500">
+      <div
+        className={`bg-transparent md:bg-slate-500 ${activeMenu ? "fixed w-full" : ""}`}
+      >
         <div
-          className={`container mx-auto flex max-w-[1200px] items-center justify-between px-10 py-4 ${activeMenu ? "" : "shadow-md md:shadow-none"}`}
+          className={`container relative z-10 mx-auto flex max-w-[1200px] items-center justify-between px-10 py-4 ${activeMenu ? "" : "shadow-md md:shadow-none"}`}
         >
           <h1 className="text-4xl font-bold">Logo2.</h1>
           <ul
@@ -111,8 +113,8 @@ const Navbar = () => {
   );
   const opsi3 = () => (
     <>
-      <div className="h-auto bg-blue-600 py-2">
-        <div className="container mx-auto flex max-w-[1200px] items-center justify-between px-10">
+      <div className={`bg-blue-500 py-2 ${activeMenu ? "hidden" : ""}`}>
+        <div className="mx-auto flex max-w-[1200px] items-center justify-between px-10">
           <div className="flex flex-row items-center py-0">
             <FaFacebookF className="pr-2 text-white" size={18} />
             <FaTwitter className="pr-2 text-white" size={24} />
@@ -127,9 +129,11 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="bg-transparent md:bg-slate-500">
+      <div
+        className={`bg-transparent md:bg-slate-500 ${activeMenu ? "fixed w-full" : ""}`}
+      >
         <div
-          className={`container mx-auto flex max-w-[1200px] items-center justify-between px-10 py-4 ${activeMenu ? "" : "shadow-md md:shadow-none"}`}
+          className={`container relative z-10 mx-auto flex max-w-[1200px] items-center justify-between px-10 py-4 ${activeMenu ? "" : "shadow-md md:shadow-none"}`}
         >
           <h1 className="text-4xl font-bold">Logo3.</h1>
           <ul
